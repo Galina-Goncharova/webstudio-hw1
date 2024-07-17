@@ -4,12 +4,13 @@
   --accent-color: #2196f3;
   --white-color: #ffffff;
   --black-color: #000000;
-  --btn-bg-color: #f5f4fa;
+  --bg-color-secondary: #f5f4fa;
   --bg-color-dark: #2f303a;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: var(--white-color);
 }
 .link {
   text-decoration: none;
@@ -59,6 +60,29 @@ body {
   color: var(--accent-color);
 }
 
+/* footer */
+
+.footer-section {
+  background-color: var(--bg-color-dark);
+}
+
+.logo-footer {
+  color: var(--white-color);
+}
+
+.address {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  color: #fff;
+  font-style: normal;
+}
+
+.footer-contacts {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* studio */
 
 .title {
@@ -85,7 +109,35 @@ body {
   color: var(--main-text-color);
 }
 
+/* hero */
+
+.hero-section {
+  background-color: var(--bg-color-dark);
+  text-align: center;
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36364;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.hero-section .btn {
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background-color: var(--accent-color);
+}
+
 /* team */
+
+.team-section {
+  background-color: var(--bg-color-secondary);
+}
 .name {
   font-weight: 500;
   font-size: 16px;
@@ -110,11 +162,30 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--main-title-color);
-  background-color: var(--btn-bg-color);
+  background-color: var(--bg-color-secondary);
+  cursor: pointer;
 }
 
 .btn:hover,
 .btn:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+}
+
+/* portfolio cards */
+
+.title-card {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-title-color);
+}
+
+.type-of-work {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
 }
