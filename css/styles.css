@@ -1,8 +1,120 @@
-h1 {
-  color: red;
+:root {
+  --main-text-color: #757575;
+  --main-title-color: #212121;
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --btn-bg-color: #f5f4fa;
+  --bg-color-dark: #2f303a;
 }
 
-.test > li {
-  color: rgb(255, 0, 255);
-  border: 1px solid tomato;
+body {
+  font-family: "Roboto", sans-serif;
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+.current {
+  color: var(--accent-color);
+}
+
+/* header */
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.03em;
+  color: var(--black-color);
+}
+
+.logo .accent {
+  color: var(--accent-color);
+}
+
+.page-link {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--main-title-color);
+}
+
+.page-link.current {
+  color: var(--accent-color);
+}
+
+.contact-link {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.page-link:hover,
+.page-link:focus,
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-color);
+}
+
+/* studio */
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--main-title-color);
+}
+
+.sub-title {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+/* team */
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--main-title-color);
+}
+
+.profile {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--main-text-color);
+}
+
+/* select  portfolio*/
+.btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--main-title-color);
+  background-color: var(--btn-bg-color);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--white-color);
+  background-color: var(--accent-color);
 }
