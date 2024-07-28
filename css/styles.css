@@ -11,15 +11,23 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--white-color);
+  color: var(--main-text-color);
 }
 .link {
   text-decoration: none;
 }
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .current {
   color: var(--accent-color);
+}
+
+.container {
+  width: 1200;
+  padding: 15px;
 }
 
 /* header */
@@ -51,6 +59,33 @@ body {
   font-size: 14px;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+}
+
+.page-nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.page-nav .logo {
+  margin-right: 93px;
+}
+
+.nav-list > li:not(:last-child),
+.contact-link:not(:last-child) {
+  margin-right: 50px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+}
+
+.contacts {
+  margin-left: auto;
 }
 
 .page-link:hover,
@@ -102,11 +137,9 @@ body {
 }
 
 .text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71429;
   letter-spacing: 0.03em;
-  color: var(--main-text-color);
 }
 
 /* hero */
@@ -123,6 +156,8 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
+
+  margin-top: 0;
 }
 
 .hero-section .btn {
@@ -151,7 +186,6 @@ body {
   font-size: 16px;
   letter-spacing: 0.03em;
   text-align: center;
-  color: var(--main-text-color);
 }
 
 /* select  portfolio*/
@@ -183,9 +217,11 @@ body {
 }
 
 .type-of-work {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
-  color: var(--main-text-color);
+}
+
+.hidden {
+  display: none;
 }
