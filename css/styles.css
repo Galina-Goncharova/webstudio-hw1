@@ -12,6 +12,20 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--white-color);
   color: var(--main-text-color);
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 .link {
   text-decoration: none;
@@ -26,8 +40,15 @@ body {
 }
 
 .container {
-  width: 1200;
-  padding: 15px;
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-container {
+  display: flex;
 }
 
 /* header */
@@ -44,9 +65,12 @@ body {
 }
 
 .page-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
+  padding-top: 34px;
+  padding-bottom: 34px;
   color: var(--main-title-color);
 }
 
@@ -55,14 +79,18 @@ body {
 }
 
 .contact-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
+  padding-top: 34px;
+  padding-bottom: 34px;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
 }
 
 .page-nav {
   display: flex;
+  align-items: center;
 }
 
 .nav-list {
@@ -85,6 +113,7 @@ body {
 }
 
 .contacts {
+  display: flex;
   margin-left: auto;
 }
 
@@ -98,14 +127,20 @@ body {
 /* footer */
 
 .footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--bg-color-dark);
 }
 
 .logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
   color: var(--white-color);
 }
 
 .address {
+  display: flex;
+  flex-direction: column;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71429;
@@ -114,16 +149,28 @@ body {
   font-style: normal;
 }
 
+.address p {
+  margin-bottom: 9px;
+}
+
+.address a:not(:last-child) {
+  margin-bottom: 9px;
+}
 .footer-contacts {
   color: rgba(255, 255, 255, 0.6);
 }
 
 /* studio */
 
+.hidden {
+  display: none;
+}
+
 .title {
   font-weight: 700;
   font-size: 36px;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
   text-align: center;
   color: var(--main-title-color);
 }
@@ -132,6 +179,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
   text-transform: uppercase;
   color: var(--main-title-color);
 }
@@ -168,15 +216,57 @@ body {
   background-color: var(--accent-color);
 }
 
+/* our advantages */
+
+.section-advantages {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advantages {
+  display: flex;
+  gap: 30px;
+}
+
+/* what we do */
+
+.work-section {
+  padding-bottom: 94px;
+}
+.work-section img:not(:last-child) {
+  margin-right: 30px;
+}
 /* team */
 
 .team-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--bg-color-secondary);
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list li {
+  padding-bottom: 30px;
+  background-color: var(--white-color);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.team-list img {
+  margin-bottom: 30px;
+}
+.team-list li:not(:last-child) {
+  margin-right: 30px;
 }
 .name {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
   text-align: center;
   color: var(--main-title-color);
 }
@@ -188,13 +278,20 @@ body {
   text-align: center;
 }
 
-/* select  portfolio*/
+/* portfolio*/
+.portfolio-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
   letter-spacing: 0.03em;
-  text-align: center;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: inherit;
   color: var(--main-title-color);
   background-color: var(--bg-color-secondary);
   cursor: pointer;
@@ -205,14 +302,41 @@ body {
   color: var(--white-color);
   background-color: var(--accent-color);
 }
+.filter-btn {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.filter-btn .btn:not(:last-child) {
+  margin-right: 8px;
+}
 
-/* portfolio cards */
+.cards-list img {
+  display: block;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cards-list li {
+  flex-basis: calc((100% - 60px) / 3);
+  /* width: 370px;
+height: 404px; */
+}
+.card-dscr {
+  padding: 20px 24px;
+  border: 1px solid #eee;
+  border-top: transparent;
+}
 
 .title-card {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
   color: var(--main-title-color);
 }
 
