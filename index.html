@@ -53,7 +53,7 @@
       <!-- hero-section -->
       <section class="hero-section">
         <h1 class="hero-title">Эффективные решения<br>для вашего бизнеса</br></h1>
-        <button class="btn" type="button">Заказать услугу</button>
+        <button class="btn" type="button" data-open-modal>Заказать услугу</button>
       </section>
       <!-- our advantages -->
       <section class="section-advantages">
@@ -117,23 +117,31 @@
       <section class="work-section">
         <div class="container">
           <h2 class="title">Чем мы занимаемся</h2>
-          <div class="flex-container">
-            <img
+          
+            <ul class="flex-container list">
+              <li class="work-list-item">   
+                <img
               src="./image/box1.jpg"
               alt="рабочий стол программиста"
               width="380"
             />
-            <img
+            <p class="work-descr">Десктопные приложения</p>
+          </li>
+              <li class="work-list-item"> <img
               src="./image/box2.jpg"
               alt="дизайн проэкта для телефона"
               width="380"
             />
-            <img
+            <p class="work-descr">Десктопные приложения</p>
+          </li>
+              <li class="work-list-item">  <img
               src="./image/box3.jpg"
               alt="цветовой круг, выбор цвета для макета"
               width="380"
             />
-          </div>
+            <p class="work-descr">Десктопные приложения</p>
+          </li>
+            </ul>
         </div>
       </section>
 
@@ -367,5 +375,33 @@
             </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <button type="button" class="close-btn" data-close-modal>
+         <svg class="close-btn-thumb" width="18" height="18">
+          <use class="icon close-btn-icon" href="./image/sprite.svg#icon-close-black"></use>
+         </svg>
+        </button>
+      </div>
+    </div>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
   </body>
 </html>
